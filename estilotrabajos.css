@@ -1,0 +1,132 @@
+/* Texto y generales */
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+  background-color: #F5F3EF;
+}
+
+.main-content {
+    padding: 50px;
+    text-align: center;
+}
+
+.main-content h1 {
+    font-size: 40px;
+}
+
+.main-content p {
+    font-size: 20px;
+    color: black;
+	font-weight: 400;
+	padding: 0px 220px;
+	text-align: justify;
+}
+
+
+/* Barra de Navegación */
+
+.logo img {
+    height: 40px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #CDB1A4;
+    padding: 10px 50px;
+}
+
+.nav-links ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links ul li {
+    display: inline;
+    margin-left: 50px;
+}
+
+.nav-links ul li a {
+    color: #4D3126;
+	font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-links ul li a:hover {
+    color: #F4F2EE;
+}
+
+
+/* Galería */
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.gallery-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery-item img {
+    max-width: 100%; /* Ajustar imagen al tamaño del contenedor */
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item button {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: #4D3126;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-item button:hover {
+    opacity: 1;
+}
+
+.category-button {
+    border: none;
+    background: none;
+    color: #4D3126;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+
+/* Videos */
+
+.videos-container {
+    display: flex;
+    flex-direction: column; /* Cambiar la dirección a columna */
+    align-items: center; /* Centrar horizontalmente */
+	gap: 20px;
+}
+
+.video-wrapper {
+    max-width: 560px; /* Ancho máximo del video */
+    width: 100%;
+    margin-bottom: 20px; /* Espacio inferior entre los videos */
+}

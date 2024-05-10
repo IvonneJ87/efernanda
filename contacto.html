@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre mí</title>
+    <link rel="stylesheet" href="estilocontacto.css">
+	<link rel="icon" type="image/png" href="logos/favicon.png">
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+	
+<body>
+	
+	<!-- Imagen de fondo -->
+	
+	<div class="background-image"></div>
+	
+	<!-- Barra de Navegación -->
+	
+    <header class="navbar">
+        <div class="logo animate__animated animate__fadeIn">
+			<a href="index.html" class="logo">
+            <img src="logos/logo.png" alt="Logo"> </a>
+        </div>
+        <nav class="nav-links animate__animated animate__fadeIn">
+            <ul>
+                <li><a href="trabajos.html">Mis trabajos</a></li>
+                <li><a href="info.html">Sobre mí</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Texto -->
+	
+    <section class="main-content animate__animated animate__fadeInDown">
+        <h1>¡Contáctame!</h1>
+        <p>Aquí estarán mis contactos de comunicación directa.</p>
+    </section>
+	
+	<h2>Encuéntrame en...</h2>
+	
+<!-- Mapa -->
+	
+    <div id="map"></div>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB4ZJZ4ZjAFDkErKICsYuEGOCr0uWIcTSE&callback=initMap" async defer></script>
+
+    <script>
+        function initMap() {
+            var center = { lat: 20.97537, lng: -89.61696 };
+
+            var mapOptions = {
+                zoom: 12,
+                center: center
+            };
+
+            var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+            var marker = new google.maps.Marker({
+                position: center,
+                map: map,
+                title: 'San Francisco'
+            });
+        }
+    </script>
+	
+</body>
+</html>
